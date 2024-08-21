@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.polibatam.synchedule">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DeadlineBuddy"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Synchedule">
+        <activity
+            android:name=".ui.deadline.DeadlineActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.DeadlineReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.calendar.CalendarManageTodayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.calendar.CalendarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.detail.ScheduleManageDayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.detail.ScheduleDayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.detail.ScheduleDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.lesson.ScheduleLessonManageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.lesson.ScheduleLessonActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.schedule.ScheduleMainActivity"
+            android:exported="true" />
+        <activity android:name=".ui.settings.SettingsActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:theme="@style/splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

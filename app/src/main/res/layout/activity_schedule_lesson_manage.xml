@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.schedule.lesson.ScheduleLessonManageActivity">
+
+    <include layout="@layout/secondary_app_bar"
+        android:id="@+id/appBarLayout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_lesson_manage_subject"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/manageSubjectTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="#8A99FB"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_lesson_manage_lecturer"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/manageLecturerTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="#8A99FB"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_lesson_manage_theme"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/manageBgColorDisplay"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#DADADA"
+                        />
+
+                    <Button
+                        android:id="@+id/manageBgColorPicker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pick a background color"
+                        android:textColor="@color/black"
+                        android:paddingVertical="5dp"
+                        app:rippleColor="#E7F0E7"
+                        app:icon="@drawable/ic_baseline_format_color_fill"
+                        app:iconTint="@color/black"
+                        app:strokeColor="#DADADA"
+                        app:strokeWidth="1dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/manageFgColorDisplay"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#DADADA"
+                        />
+
+                    <Button
+                        android:id="@+id/manageFgColorPicker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pick a foreground color"
+                        android:textColor="@color/black"
+                        android:paddingVertical="5dp"
+                        app:rippleColor="#E7F0E7"
+                        app:icon="@drawable/ic_baseline_format_color_fill"
+                        app:iconTint="@color/black"
+                        app:strokeColor="#DADADA"
+                        app:strokeWidth="1dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp">
+
+                <Button
+                    android:id="@+id/manageSubjectDeleteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Delete"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/red"
+                    android:paddingVertical="15dp"
+                    android:textSize="16sp"
+                    android:layout_marginVertical="5dp"
+                    app:shapeAppearance="?attr/shapeAppearanceLargeComponent"/>
+
+                <Button
+                    android:id="@+id/manageSubjectSaveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="#8A99FB"
+                    android:paddingVertical="15dp"
+                    android:layout_marginVertical="5dp"
+                    app:shapeAppearance="?attr/shapeAppearanceLargeComponent"/>
+
+                <Button
+                    android:id="@+id/manageSubjectAddBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/green"
+                    android:paddingVertical="15dp"
+                    android:textSize="16sp"
+                    android:layout_marginVertical="5dp"
+                    app:shapeAppearance="?attr/shapeAppearanceLargeComponent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

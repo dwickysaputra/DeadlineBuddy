@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.calendar.CalendarActivity">
+
+    <include layout="@layout/secondary_app_bar"
+        android:id="@+id/appBarLayout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#CFF8CE"
+                android:padding="30dp">
+
+                <com.applandeo.materialcalendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:headerColor="#CFF8CE"
+                    app:previousButtonSrc="@drawable/ic_baseline_arrow_back"
+                    app:forwardButtonSrc="@drawable/ic_baseline_arrow_forward_24"
+                    app:headerLabelColor="@color/black"
+                    app:abbreviationsBarColor="#E7F0E7"
+                    app:abbreviationsLabelsColor="@color/black"
+                    app:type="one_day_picker"
+                    app:eventsEnabled="true"
+                    app:pagesColor="#CFF8CE"
+                    app:selectionColor="#E5A766"
+                    app:highlightedDaysLabelsColor="@color/red"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/nunito_sans_extrabold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginBottom="15dp"
+                tools:listitem="@layout/item_calendar_list"
+                tools:itemCount="5"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/calendarManageLessonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/green"
+        android:layout_margin="16dp"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/ic_baseline_add"
+        app:borderWidth="0dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

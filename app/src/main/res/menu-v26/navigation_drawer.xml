@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/groupMenus"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemSchedule"
+            android:title="@string/menu_item_schedule"
+            android:icon="@drawable/ic_schedule"
+            android:iconTint="@color/dark_blue"
+            android:iconTintMode="screen"/>
+
+        <item
+            android:id="@+id/itemCalendar"
+            android:title="@string/menu_item_calendar"
+            android:icon="@drawable/ic_calendar_filled"
+            android:iconTint="@color/green"/>
+
+        <item
+            android:id="@+id/itemDeadline"
+            android:title="@string/menu_item_deadline"
+            android:icon="@drawable/ic_deadline"
+            android:iconTint="@color/orange"/>
+    </group>
+
+    <group
+        android:id="@+id/groupSettings"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemSettings"
+            android:title="@string/menu_item_settings"
+            android:icon="@drawable/ic_settings"
+            android:iconTint="@color/dark_green_blue"/>
+    </group>
+</menu>

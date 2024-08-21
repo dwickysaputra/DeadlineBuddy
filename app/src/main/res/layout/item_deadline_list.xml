@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/deadlineTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_gravity="center|start"
+                android:gravity="center|start"
+                android:fontFamily="@font/nunito_sans_extrabold"
+                tools:text="Tugas UAS Mobile"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/deadlineRemainTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_gravity="center|start"
+                tools:text="12 Hours Left"
+                />
+
+            <View
+                android:id="@+id/deadlineDropdownView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"/>
+
+            <ImageButton
+                android:id="@+id/deadlineMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_vert"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/deadlineFinished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_baseline_check"
+                android:gravity="center"
+                android:drawablePadding="6dp"
+                android:textColor="#409AB6"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginVertical="2dp"
+                app:drawableTint="#409AB6"
+                tools:text="Finished"/>
+
+            <TextView
+                android:id="@+id/deadlineExpired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ED5050"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:layout_marginVertical="2dp"
+                tools:text="Expired"
+                app:drawableStartCompat="@drawable/ic_baseline_cancel"
+                app:drawableTint="#ED5050" />
+
+            <TextView
+                android:id="@+id/deadlineDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:drawablePadding="2dp"
+                android:layout_marginVertical="2dp"
+                tools:text="13 July 2021"
+                app:drawableStartCompat="@drawable/ic_calendar_filled_30"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/deadlineTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:layout_marginVertical="2dp"
+                tools:text="12:00"
+                app:drawableStartCompat="@drawable/ic_clock_circle_filled"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/deadlineSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:layout_marginVertical="2dp"
+                tools:text="Pemrograman Perangkat Keras"
+                app:drawableStartCompat="@drawable/ic_circle_shape_deadline"
+                app:drawableTint="#3641B7" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
